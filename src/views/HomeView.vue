@@ -1,18 +1,36 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HomeText />
+    <HomeButton />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import HomeText from "@/components/HomeText.vue";
+import HomeButton from "@/components/HomeButton.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    HomeText,
+    HomeButton,
   },
 };
 </script>
+<style scoped>
+.home {
+  max-width: 1440px;
+
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  padding-top: 17%;
+  width: 100%;
+  height: 100vh;
+  background-image: url("@/assets/home/background-home-desktop.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+</style>
