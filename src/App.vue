@@ -22,7 +22,7 @@
 
 <style>
 * {
-  margin: auto;
+  margin: 0.2rem auto;
 }
 #app {
   position: relative;

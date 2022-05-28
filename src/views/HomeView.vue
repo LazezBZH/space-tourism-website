@@ -22,9 +22,6 @@ export default {
 .home {
   max-width: 1440px;
 
-  z-index: -1;
-  position: absolute;
-  top: 0;
   padding-top: 17%;
   width: 100%;
   height: 100vh;
