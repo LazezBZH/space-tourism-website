@@ -5,11 +5,16 @@
       <div class="technology-all">
         <div class="btn">
           <button
-            v-for="item in data"
+            v-for="(item, index) in data"
+            :class="{ active: index === activeId }"
             :key="item.name"
-            v-on:click="activeId = data.indexOf(item)"
+            :id="data.indexOf(item)"
+            v-on:click="
+              activeId = data.indexOf(item);
+              changeActive(index);
+            "
           >
-            {{ data.indexOf(item) }}
+            {{ data.indexOf(item) + 1 }}
           </button>
         </div>
         <OneTechnology :i="activeId"></OneTechnology>
@@ -30,7 +35,13 @@ export default {
     return {
       data,
       activeId: 0,
+      isActive: null,
     };
+  },
+  methods: {
+    changeActive(index) {
+      this.isActive = this.isActive === index ? null : index;
+    },
   },
 };
 </script>
@@ -74,7 +85,7 @@ h1 span {
   display: flex;
 }
 .btn {
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,12 +94,16 @@ h1 span {
 button {
   width: 5rem;
   height: 5rem;
-  background-color: white;
-  color: black;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
   border: none;
   padding: 0;
   border-radius: 50%;
   font-size: 2rem;
+}
+.active {
+  color: black;
+  background-color: white;
 }
 h2 {
   font-family: "Barlow Condensed", sans-serif;

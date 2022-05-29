@@ -6,9 +6,13 @@
         <OneCrew :i="activeId"></OneCrew>
 
         <button
-          v-for="item in data"
+          v-for="(item, index) in data"
+          :class="{ active: index === activeId }"
           :key="item.name"
-          v-on:click="activeId = data.indexOf(item)"
+          v-on:click="
+            activeId = data.indexOf(item);
+            changeActive(index);
+          "
         ></button>
       </div>
     </div>
@@ -29,7 +33,13 @@ export default {
     return {
       data,
       activeId: 0,
+      isActive: null,
     };
+  },
+  methods: {
+    changeActive(index) {
+      this.isActive = this.isActive === index ? null : index;
+    },
   },
 };
 </script>
@@ -73,12 +83,14 @@ h1 span {
 button {
   width: 0.7rem;
   height: 0.7rem;
-  background-color: white;
-  color: #d0d6f9;
+  background-color: rgba(255, 255, 255, 0.174);
   border: none;
   padding: 0;
   margin: 3rem 2rem 0 0;
   border-radius: 50%;
+}
+.active {
+  background-color: rgba(255, 255, 255);
 }
 h2 {
   font-family: "Barlow Condensed", sans-serif;

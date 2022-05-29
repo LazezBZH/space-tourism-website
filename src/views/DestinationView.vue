@@ -3,9 +3,13 @@
     <h1><span>01</span> PICK YOUR DESTINATION</h1>
     <div class="destination-txt">
       <button
-        v-for="item in data"
+        v-for="(item, index) in data"
+        :class="{ active: index === activeId }"
         :key="item.name"
-        v-on:click="activeId = data.indexOf(item)"
+        v-on:click="
+          activeId = data.indexOf(item);
+          changeActive(index);
+        "
       >
         <h2>{{ item.name.toUpperCase() }}</h2>
       </button>
@@ -29,7 +33,13 @@ export default {
     return {
       data,
       activeId: 0,
+      isActive: null,
     };
+  },
+  methods: {
+    changeActive(index) {
+      this.isActive = this.isActive === index ? null : index;
+    },
   },
 };
 </script>
@@ -65,13 +75,17 @@ button {
   background-color: rgba(255, 255, 255, 0);
   color: #d0d6f9;
   border: none;
-  padding: 2rem 2rem 2rem 0;
+  padding: 2rem 2rem 1.5rem 0;
   margin-bottom: 0;
+}
+.active h2 {
+  border-bottom: solid 0.15rem white;
 }
 h2 {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 2.7px;
+  padding-bottom: 0.5rem;
 }
 </style>

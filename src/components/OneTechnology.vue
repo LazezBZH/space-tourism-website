@@ -40,13 +40,13 @@ export default {
 }
 h3 {
   font-family: "Noto Serif", serif;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
 h4 {
   font-family: "Noto Serif", serif;
-  font-size: 2.62rem;
+  font-size: 3.5rem;
   font-weight: 400;
   margin: 1.3rem auto;
 }
