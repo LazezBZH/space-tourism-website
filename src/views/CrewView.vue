@@ -78,7 +78,7 @@ h1 span {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding-bottom: 2rem;
+  padding-bottom: 3.5rem;
 }
 button {
   width: 0.7rem;

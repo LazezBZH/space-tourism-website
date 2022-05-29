@@ -32,7 +32,7 @@ h2 {
   font-weight: 400;
 }
 h1 {
-  font-family: "Noto Serif", serif;
+  font-family: "Bellefair", serif;
   color: white;
   font-size: 9rem;
   font-weight: 400;

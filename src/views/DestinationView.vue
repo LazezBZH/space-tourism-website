@@ -68,14 +68,14 @@ h1 span {
   font-weight: 700;
 }
 .destination-txt {
-  width: 50%;
+  width: 42%;
   margin-right: 0;
 }
 button {
   background-color: rgba(255, 255, 255, 0);
   color: #d0d6f9;
   border: none;
-  padding: 2rem 2rem 1.5rem 0;
+  padding: 2rem 1.5rem 1.5rem 0;
   margin-bottom: 0;
 }
 button h2:hover {
@@ -87,7 +87,7 @@ button h2:hover {
 }
 h2 {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 2.7px;
   padding-bottom: 0.5rem;

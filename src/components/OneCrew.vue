@@ -31,31 +31,31 @@ export default {
 <style scoped>
 .crew {
   color: white;
-  width: 80%;
+  width: 100%;
   margin-left: 0;
   margin-top: 0;
 }
-.image {
-  width: 10rem;
-}
+
 h3 {
-  font-family: "Noto Serif", serif;
-  font-size: 1.5rem;
+  font-family: "Bellefair", serif;
+  font-size: 1.9rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
 h4 {
-  font-family: "Noto Serif", serif;
-  font-size: 2.62rem;
+  font-family: "Bellefair", serif;
+  font-size: 3.3rem;
   font-weight: 400;
   margin: 1.3rem auto;
 }
 .bio {
+  width: 70%;
   font-family: "Barlow", sans-serif;
-  font-size: 1.2rem;
-  margin: 1rem auto 2rem auto;
-  padding-right: 2.1rem;
-  color: rgba(208, 214, 249, 0.9);
-  line-height: 1.8rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 1rem auto 2.5rem 0;
+  padding-right: 1.5rem;
+  color: #d0d6f9;
+  line-height: 1.5rem;
 }
 </style>

@@ -39,23 +39,25 @@ export default {
   width: 10rem;
 }
 h3 {
-  font-family: "Noto Serif", serif;
-  font-size: 0.9rem;
+  font-family: "Bellefair", serif;
+  font-size: 1rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
 h4 {
-  font-family: "Noto Serif", serif;
+  font-family: "Bellefair", serif;
   font-size: 3.5rem;
   font-weight: 400;
-  margin: 1.3rem auto;
+  margin: 0.8rem auto;
 }
 .description {
+  width: 87%;
   font-family: "Barlow", sans-serif;
-  font-size: 1.2rem;
-  margin: 1rem auto 2rem auto;
-  padding-right: 2.1rem;
-  color: rgba(208, 214, 249, 0.9);
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 1.2rem auto 2rem 0;
+  padding-right: 1.5rem;
+  color: #d0d6f9;
   line-height: 1.8rem;
 }
 </style>

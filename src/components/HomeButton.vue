@@ -14,7 +14,7 @@ export default {
 <style scoped>
 .home-btn {
   max-height: 100vh;
-  font-family: "Noto Serif", serif;
+  font-family: "Bellefair", serif;
   font-size: 2rem;
   border: none;
   position: relative;
@@ -24,11 +24,11 @@ export default {
   bottom: -2rem;
   left: 67%;
 
-  border: solid 2rem rgba(0, 0, 0, 0);
+  border: solid 3.5rem rgba(0, 0, 0, 0);
   border-radius: 50%;
 }
 .home-btn img:hover {
-  border: solid 2rem #0b0d17;
+  border: solid 3.5rem rgba(151, 151, 151, 0.4);
   border-radius: 50%;
 }
 </style>

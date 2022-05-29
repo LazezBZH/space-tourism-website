@@ -46,32 +46,39 @@ export default {
   width: 10rem;
 }
 h3 {
-  font-family: "Noto Serif", serif;
-  font-size: 8rem;
+  font-family: "Bellefair", serif;
+  font-size: 6.2rem;
   font-weight: 200;
   margin-top: 0;
   line-height: 7rem;
 }
 .description {
+  width: 90%;
   font-family: "Barlow", sans-serif;
-  font-size: 1.5rem;
-  margin: 2rem auto;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 2rem auto 2rem 0;
   color: #d0d6f9;
+  line-height: 1.8rem;
 }
 .under-description {
+  width: 90%;
   display: flex;
   justify-content: left;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
+  margin-left: 0;
+  padding-top: 1.5rem;
+  border-top: 0.05rem solid rgba(151, 151, 151, 1);
 }
 .grey-p {
   color: #d0d6f9;
   font-family: "Barlow condensed", sans-serif;
   letter-spacing: 2.36px;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .white-p {
-  font-family: "Noto Serif", serif;
-  font-size: 2.5rem;
+  font-family: "Bellefair", serif;
+  font-size: 1.8rem;
 }
 .distance,
 .travel {
