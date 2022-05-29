@@ -89,7 +89,11 @@ button {
   margin: 3rem 2rem 0 0;
   border-radius: 50%;
 }
-.active {
+button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.active,
+.active:hover {
   background-color: rgba(255, 255, 255);
 }
 h2 {

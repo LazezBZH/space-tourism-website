@@ -78,7 +78,11 @@ button {
   padding: 2rem 2rem 1.5rem 0;
   margin-bottom: 0;
 }
-.active h2 {
+button h2:hover {
+  border-bottom: solid 0.12rem rgba(255, 255, 255, 0.5);
+}
+.active h2,
+.active h2:hover {
   border-bottom: solid 0.15rem white;
 }
 h2 {

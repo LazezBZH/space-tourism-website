@@ -95,13 +95,17 @@ button {
   width: 5rem;
   height: 5rem;
   background-color: rgba(255, 255, 255, 0);
+  border: solid 0.12rem rgba(255, 255, 255, 0.174);
   color: white;
-  border: none;
   padding: 0;
   border-radius: 50%;
   font-size: 2rem;
 }
-.active {
+button:hover {
+  border: solid 0.12rem rgba(255, 255, 255, 0.6);
+}
+.active,
+.active:hover {
   color: black;
   background-color: white;
 }
