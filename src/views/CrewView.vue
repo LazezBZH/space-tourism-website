@@ -120,4 +120,21 @@ h2 {
   font-weight: 400;
   letter-spacing: 2.7px;
 }
+
+@media screen and (min-width: 850px) and (max-width: 1210px) {
+  .crew-image {
+    height: 720px;
+    display: flex;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+  }
+  .crew-image img {
+    width: 80%;
+    height: 80%;
+  }
+  .crew-txt {
+    margin-left: 5rem;
+  }
+}
 </style>

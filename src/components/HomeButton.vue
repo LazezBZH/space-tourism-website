@@ -22,7 +22,7 @@ export default {
 .home-btn img {
   position: absolute;
   bottom: -2rem;
-  left: 67%;
+  right: 7%;
 
   border: solid 3.5rem rgba(0, 0, 0, 0);
   border-radius: 50%;
@@ -30,5 +30,13 @@ export default {
 .home-btn img:hover {
   border: solid 3.5rem rgba(151, 151, 151, 0.4);
   border-radius: 50%;
+}
+
+@media screen and (min-width: 850px) and (max-width: 1040px) {
+  .home-btn img {
+    position: absolute;
+    bottom: -3rem;
+    right: 2%;
+  }
 }
 </style>

@@ -127,4 +127,31 @@ h2 {
   font-weight: 400;
   letter-spacing: 2.7px;
 }
+
+@media screen and (min-width: 850px) and (max-width: 1020px) {
+  .technology-image {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .technology-image img {
+    height: 400px;
+  }
+  .btn {
+    padding-right: 3rem;
+  }
+  button {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1003px) and (max-width: 1383px) {
+  button {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 850px) and (max-width: 1002px) {
+  button {
+    margin-bottom: 5rem;
+  }
+}
 </style>
