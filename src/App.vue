@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <img alt="logo" src="./assets/shared/logo.svg" />
+    <img alt="logo" src="/assets/shared/logo.svg" />
     <div class="trait"></div>
     <div class="links">
       <router-link class="link link_1" to="/"
@@ -27,6 +27,7 @@
 #app {
   position: relative;
   max-width: 1440px;
+  padding-bottom: 5rem;
 }
 
 nav {

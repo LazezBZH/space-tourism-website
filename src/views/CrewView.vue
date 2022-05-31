@@ -1,8 +1,8 @@
 <template>
   <div class="crews">
     <h1><span>02</span> MEET YOUR CREW</h1>
-    <div class="crew-txt">
-      <div class="crew-all">
+    <div class="crew-details">
+      <div class="crew-txt">
         <OneCrew :i="activeId"></OneCrew>
 
         <button
@@ -15,6 +15,9 @@
           "
         ></button>
       </div>
+      <div class="crew-image">
+        <CrewImage :i="activeId"></CrewImage>
+      </div>
     </div>
   </div>
 </template>
@@ -25,10 +28,11 @@ let data = json.crew;
 console.log(data);
 
 import OneCrew from "@/components/OneCrew.vue";
+import CrewImage from "@/components/CrewImage.vue";
 
 export default {
   name: "CrewView",
-  components: { OneCrew },
+  components: { OneCrew, CrewImage },
   data() {
     return {
       data,
@@ -46,9 +50,9 @@ export default {
 <style scoped>
 .crews {
   max-width: 1440px;
-  padding-top: 17%;
+  padding-top: 15%;
   width: 100%;
-  height: 100vh;
+  height: 900px;
   background-image: url("@/assets/crew/background-crew-desktop.jpg");
   background-size: auto;
   background-repeat: no-repeat;
@@ -67,18 +71,32 @@ h1 span {
   color: rgba(255, 255, 255, 0.4);
   font-weight: 700;
 }
-.crew-txt {
-  width: 57%;
-  height: 60vh;
-  margin-left: 0;
+.crew-details {
+  width: 100%;
+  height: 100%;
+  margin: 0;
   position: relative;
+  display: flex;
+  flex-direction: row;
 }
-.crew-all {
-  width: 75%;
+.crew-txt {
+  width: 43%;
+  margin-top: 15%;
+  margin-left: 10rem;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  padding-bottom: 3.5rem;
+  top: 0;
+}
+.crew-image {
+  height: 720px;
+  display: flex;
+  position: absolute;
+  right: 10%;
+  bottom: 24.5%;
+}
+.crew-image img {
+  width: 95%;
+  height: 95%;
+  vertical-align: baseline;
 }
 button {
   width: 0.7rem;

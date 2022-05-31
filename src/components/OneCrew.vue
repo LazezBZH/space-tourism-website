@@ -46,10 +46,10 @@ h4 {
   font-family: "Bellefair", serif;
   font-size: 3.3rem;
   font-weight: 400;
-  margin: 1.3rem auto;
+  margin: 1.3rem 0;
 }
 .bio {
-  width: 70%;
+  width: 71%;
   font-family: "Barlow", sans-serif;
   font-size: 1.1rem;
   font-weight: 300;

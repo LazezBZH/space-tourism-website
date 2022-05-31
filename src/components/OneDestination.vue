@@ -44,6 +44,7 @@ export default {
 }
 .image {
   width: 10rem;
+  height: 10rem;
 }
 h3 {
   font-family: "Bellefair", serif;
@@ -86,5 +87,8 @@ h3 {
 }
 .distance {
   margin-right: 4rem;
+}
+.image img {
+  width: 100%;
 }
 </style>

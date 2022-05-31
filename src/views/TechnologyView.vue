@@ -1,8 +1,8 @@
 <template>
   <div class="technologies">
     <h1><span>02</span> SPACE LAUNCH 101</h1>
-    <div class="technology-txt">
-      <div class="technology-all">
+    <div class="technology-details">
+      <div class="technology-txt">
         <div class="btn">
           <button
             v-for="(item, index) in data"
@@ -19,6 +19,9 @@
         </div>
         <OneTechnology :i="activeId"></OneTechnology>
       </div>
+      <div class="technology-image">
+        <TechnologyImage :i="activeId"></TechnologyImage>
+      </div>
     </div>
   </div>
 </template>
@@ -28,9 +31,11 @@ let data = json.technology;
 
 console.log(data);
 import OneTechnology from "../components/OneTechnology";
+import TechnologyImage from "../components/TechnologyImage.vue";
+
 export default {
   name: "TechnologyView",
-  components: { OneTechnology },
+  components: { OneTechnology, TechnologyImage },
   data() {
     return {
       data,
@@ -48,7 +53,7 @@ export default {
 <style scoped>
 .technologies {
   max-width: 1440px;
-  padding-top: 17%;
+  padding-top: 15%;
   width: 100%;
   height: 100vh;
   background-image: url("@/assets/technology/background-technology-desktop.jpg");
@@ -63,29 +68,36 @@ h1 {
   letter-spacing: 4.72px;
   font-weight: 400;
   margin-left: 10rem;
+  margin-bottom: 2%;
 }
 h1 span {
   padding-right: 2rem;
   color: rgba(255, 255, 255, 0.4);
   font-weight: 700;
 }
-.technology-txt {
-  width: 57%;
-  height: 60vh;
+.technology-details {
+  width: 100%;
+
   margin-left: 0;
   position: relative;
-}
-.technology-all {
-  width: 79.7%;
-  height: 60%;
-  position: absolute;
-  bottom: 22%;
-  right: 0;
-
   display: flex;
 }
+.technology-txt {
+  width: 45.5%;
+  height: 60%;
+  display: flex;
+  padding-top: 5rem;
+}
+.technology-image {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.technology-image img {
+  height: 527px;
+}
 .btn {
-  height: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -97,9 +109,9 @@ button {
   background-color: rgba(255, 255, 255, 0);
   border: solid 0.12rem rgba(255, 255, 255, 0.174);
   color: white;
-  padding: 0;
   border-radius: 50%;
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 button:hover {
   border: solid 0.12rem rgba(255, 255, 255, 0.6);

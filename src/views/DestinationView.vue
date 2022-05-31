@@ -1,20 +1,25 @@
 <template>
   <div class="destinations">
     <h1><span>01</span> PICK YOUR DESTINATION</h1>
-    <div class="destination-txt">
-      <button
-        v-for="(item, index) in data"
-        :class="{ active: index === activeId }"
-        :key="item.name"
-        v-on:click="
-          activeId = data.indexOf(item);
-          changeActive(index);
-        "
-      >
-        <h2>{{ item.name.toUpperCase() }}</h2>
-      </button>
+    <div class="destination-details">
+      <div class="destination-image">
+        <DestinationImage :i="activeId"></DestinationImage>
+      </div>
+      <div class="destination-txt">
+        <button
+          v-for="(item, index) in data"
+          :class="{ active: index === activeId }"
+          :key="item.name"
+          v-on:click="
+            activeId = data.indexOf(item);
+            changeActive(index);
+          "
+        >
+          <h2>{{ item.name.toUpperCase() }}</h2>
+        </button>
 
-      <OneDestination :i="activeId"></OneDestination>
+        <OneDestination :i="activeId"></OneDestination>
+      </div>
     </div>
   </div>
 </template>
@@ -25,10 +30,11 @@ let data = json.destinations;
 console.log(data);
 
 import OneDestination from "@/components/OneDestination.vue";
+import DestinationImage from "@/components/DestinationImage.vue";
 
 export default {
   name: "DestinationView",
-  components: { OneDestination },
+  components: { OneDestination, DestinationImage },
   data() {
     return {
       data,
@@ -46,7 +52,7 @@ export default {
 <style scoped>
 .destinations {
   max-width: 1440px;
-  padding-top: 17%;
+  padding-top: 15%;
   width: 100%;
   height: 100vh;
   background-image: url("@/assets/destination/background-destination-desktop.jpg");
@@ -61,15 +67,30 @@ h1 {
   letter-spacing: 4.72px;
   font-weight: 400;
   margin-left: 10rem;
+  margin-bottom: 3%;
 }
 h1 span {
   padding-right: 2rem;
   color: rgba(255, 255, 255, 0.4);
   font-weight: 700;
 }
+.destination-details {
+  width: 100%;
+  margin-right: 0;
+  display: flex;
+}
 .destination-txt {
   width: 42%;
   margin-right: 0;
+  margin-left: 0;
+}
+.destination-image {
+  display: flex;
+  align-items: center;
+}
+.destination-image img {
+  width: 445px;
+  height: 445px;
 }
 button {
   background-color: rgba(255, 255, 255, 0);

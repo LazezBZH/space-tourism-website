@@ -1,6 +1,6 @@
 <template>
   <div class="home-btn">
-    <img alt="logo" src="@/assets/button.svg" />
+    <img alt="logo" src="/assets/button.svg" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 <style scoped>
 .home-btn {
   max-height: 100vh;
-  font-family: "Bellefair", serif;
+  font-family: "Noto Serif", serif;
   font-size: 2rem;
   border: none;
   position: relative;
