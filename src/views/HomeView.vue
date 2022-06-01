@@ -21,7 +21,6 @@ export default {
 <style scoped>
 .home {
   max-width: 1440px;
-
   padding-top: 17%;
   width: 100%;
   height: 100vh;
@@ -29,5 +28,16 @@ export default {
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top right;
+}
+
+@media screen and (min-width: 500px) and (max-width: 770px) {
+  .home {
+    background-image: url("@/assets/home/background-home-tablet.jpg");
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 849px) {
+  .home {
+    margin: auto;
+  }
 }
 </style>

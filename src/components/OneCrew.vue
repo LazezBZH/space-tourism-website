@@ -58,4 +58,23 @@ h4 {
   color: #d0d6f9;
   line-height: 1.5rem;
 }
+
+@media screen and (min-width: 500px) and (max-width: 850px) {
+  .crew {
+    margin: auto;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+  .bio {
+    width: 80%;
+    font-size: 1.1rem;
+    margin: auto;
+    padding: auto;
+  }
+}
 </style>

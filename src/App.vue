@@ -23,6 +23,7 @@
 <style>
 * {
   margin: 0.2rem auto;
+  box-sizing: content-box;
 }
 #app {
   position: relative;
@@ -94,5 +95,20 @@ nav a:hover {
   padding-top: 5%;
   padding-bottom: 5%;
   margin: auto 3%;
+}
+
+@media screen and (min-width: 601px) and (max-width: 999px) {
+  .links {
+    width: 70%;
+    justify-content: right;
+  }
+  .trait {
+    width: 20%;
+  }
+}
+@media screen and (max-width: 849px) {
+  .bold {
+    display: none;
+  }
 }
 </style>

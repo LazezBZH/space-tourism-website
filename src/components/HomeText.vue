@@ -45,4 +45,25 @@ p {
   font-size: 1.15rem;
   line-height: 1.9rem;
 }
+
+@media screen and (min-width: 601px) and (max-width: 849px) {
+  .home-txt {
+    width: 58%;
+    text-align: center;
+    margin: auto;
+    padding-top: 4rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2rem;
+  }
+  h2,
+  h1 {
+    margin: auto;
+  }
+}
 </style>

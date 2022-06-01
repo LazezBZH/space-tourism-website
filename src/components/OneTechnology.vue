@@ -60,4 +60,28 @@ h4 {
   color: #d0d6f9;
   line-height: 1.8rem;
 }
+
+@media screen and (min-width: 500px) and (max-width: 849px) {
+  .technology {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 2.5rem;
+
+    margin: auto;
+  }
+  .description {
+    width: 55%;
+    font-family: "Barlow", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: auto;
+    padding-right: 1.5rem;
+    color: #d0d6f9;
+    line-height: 1.8rem;
+  }
+}
 </style>

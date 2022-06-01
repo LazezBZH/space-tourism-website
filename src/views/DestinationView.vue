@@ -6,17 +6,19 @@
         <DestinationImage :i="activeId"></DestinationImage>
       </div>
       <div class="destination-txt">
-        <button
-          v-for="(item, index) in data"
-          :class="{ active: index === activeId }"
-          :key="item.name"
-          v-on:click="
-            activeId = data.indexOf(item);
-            changeActive(index);
-          "
-        >
-          <h2>{{ item.name.toUpperCase() }}</h2>
-        </button>
+        <div class="destination-btn">
+          <button
+            v-for="(item, index) in data"
+            :class="{ active: index === activeId }"
+            :key="item.name"
+            v-on:click="
+              activeId = data.indexOf(item);
+              changeActive(index);
+            "
+          >
+            <h2>{{ item.name.toUpperCase() }}</h2>
+          </button>
+        </div>
 
         <OneDestination :i="activeId"></OneDestination>
       </div>
@@ -112,5 +114,43 @@ h2 {
   font-weight: 400;
   letter-spacing: 2.7px;
   padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 500px) and (max-width: 770px) {
+  .destinations {
+    background-image: url("@/assets/destination/background-destination-tablet.jpg");
+    margin: auto;
+  }
+  .destination-details {
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+  .destination-image img {
+    width: 55%;
+    height: 55%;
+  }
+  h1 {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 7%;
+  }
+  .destination-txt {
+    width: 90%;
+    margin: auto;
+  }
+  .destination-btn {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  button {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 849px) {
 }
 </style>

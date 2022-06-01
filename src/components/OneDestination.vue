@@ -91,4 +91,28 @@ h3 {
 .image img {
   width: 100%;
 }
+
+@media screen and (min-width: 500px) and (max-width: 770px) {
+  .destination {
+    margin: auto;
+    text-align: center;
+  }
+  .distance,
+  .travel {
+    margin: auto;
+  }
+  h3 {
+    font-size: 5rem;
+  }
+  .description {
+    width: 92.5%;
+    font-size: 0.9rem;
+  }
+  .grey-p {
+    font-size: 0.9rem;
+  }
+  .white-p {
+    font-size: 1.5rem;
+  }
+}
 </style>

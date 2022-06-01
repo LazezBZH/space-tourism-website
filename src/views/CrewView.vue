@@ -5,15 +5,17 @@
       <div class="crew-txt">
         <OneCrew :i="activeId"></OneCrew>
 
-        <button
-          v-for="(item, index) in data"
-          :class="{ active: index === activeId }"
-          :key="item.name"
-          v-on:click="
-            activeId = data.indexOf(item);
-            changeActive(index);
-          "
-        ></button>
+        <div class="crew-btn">
+          <button
+            v-for="(item, index) in data"
+            :class="{ active: index === activeId }"
+            :key="item.name"
+            v-on:click="
+              activeId = data.indexOf(item);
+              changeActive(index);
+            "
+          ></button>
+        </div>
       </div>
       <div class="crew-image">
         <CrewImage :i="activeId"></CrewImage>
@@ -96,7 +98,6 @@ h1 span {
 .crew-image img {
   width: 95%;
   height: 95%;
-  vertical-align: baseline;
 }
 button {
   width: 0.7rem;
@@ -121,7 +122,7 @@ h2 {
   letter-spacing: 2.7px;
 }
 
-@media screen and (min-width: 850px) and (max-width: 1210px) {
+@media screen and (min-width: 851px) and (max-width: 1210px) {
   .crew-image {
     height: 720px;
     display: flex;
@@ -135,6 +136,52 @@ h2 {
   }
   .crew-txt {
     margin-left: 5rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 850px) {
+  .crew-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .crew-image,
+  .crew-txt {
+    position: initial;
+  }
+  .crews {
+    height: 1024px;
+    background-image: url("@/assets/crew/background-crew-tablet.jpg");
+    background-size: 100%;
+  }
+  h1 {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2%;
+  }
+  .crew-txt {
+    width: 90%;
+    margin: auto;
+  }
+  .crew-image {
+    width: auto;
+    max-height: 572px;
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+  .crew-image img {
+    width: auto;
+    max-height: 500px;
+    position: absolute;
+    bottom: 18%;
+    left: 25%;
+  }
+  .crew-btn {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
   }
 }
 </style>

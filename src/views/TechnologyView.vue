@@ -3,7 +3,7 @@
     <h1><span>02</span> SPACE LAUNCH 101</h1>
     <div class="technology-details">
       <div class="technology-txt">
-        <div class="btn">
+        <div class="technology-btn">
           <button
             v-for="(item, index) in data"
             :class="{ active: index === activeId }"
@@ -19,8 +19,11 @@
         </div>
         <OneTechnology :i="activeId"></OneTechnology>
       </div>
-      <div class="technology-image">
+      <div class="technology-image-portrait">
         <TechnologyImage :i="activeId"></TechnologyImage>
+      </div>
+      <div class="technology-image-landscape">
+        <TechnologyLandscapeImage :i="activeId"></TechnologyLandscapeImage>
       </div>
     </div>
   </div>
@@ -32,10 +35,11 @@ let data = json.technology;
 console.log(data);
 import OneTechnology from "../components/OneTechnology";
 import TechnologyImage from "../components/TechnologyImage.vue";
+import TechnologyLandscapeImage from "../components/TechnologyLandscapeImage.vue";
 
 export default {
   name: "TechnologyView",
-  components: { OneTechnology, TechnologyImage },
+  components: { OneTechnology, TechnologyImage, TechnologyLandscapeImage },
   data() {
     return {
       data,
@@ -54,8 +58,9 @@ export default {
 .technologies {
   max-width: 1440px;
   padding-top: 15%;
+  padding-bottom: 55rem;
   width: 100%;
-  height: 100vh;
+
   background-image: url("@/assets/technology/background-technology-desktop.jpg");
   background-size: auto;
   background-repeat: no-repeat;
@@ -88,15 +93,18 @@ h1 span {
   display: flex;
   padding-top: 5rem;
 }
-.technology-image {
+.technology-image-portrait {
   display: flex;
   align-items: center;
   margin: 0;
 }
-.technology-image img {
+.technology-image-portrait img {
   height: 527px;
 }
-.btn {
+.technology-image-landscape {
+  display: none;
+}
+.technology-btn {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -129,12 +137,12 @@ h2 {
 }
 
 @media screen and (min-width: 850px) and (max-width: 1020px) {
-  .technology-image {
+  .technology-image-portrait {
     display: flex;
     align-items: center;
     margin: 0;
   }
-  .technology-image img {
+  .technology-image-portrait img {
     height: 400px;
   }
   .btn {
@@ -149,9 +157,61 @@ h2 {
     margin-bottom: 3rem;
   }
 }
-@media screen and (min-width: 850px) and (max-width: 1002px) {
+@media screen and (min-width: 851px) and (max-width: 1002px) {
   button {
     margin-bottom: 5rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 849px) {
+  h1 {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2%;
+  }
+  .technology-details {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .technology-image-landscape {
+    display: block;
+    width: 100%;
+  }
+  .technology-image-landscape img {
+    width: 100%;
+  }
+  .technology-image-portrait {
+    display: none;
+  }
+  .technology-txt {
+    width: 100%;
+    display: block;
+    padding-top: 3rem;
+
+    margin: auto;
+  }
+  .technology-btn {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+  }
+
+  button {
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 0.12rem rgba(255, 255, 255, 0.174);
+    color: white;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .technologies {
+    background-image: url("@/assets/technology/background-technology-tablet.jpg");
   }
 }
 </style>
