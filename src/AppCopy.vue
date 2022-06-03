@@ -1,8 +1,9 @@
 <template>
-  <nav class="main-nav">
+  <nav>
     <img alt="logo" src="/assets/shared/logo.svg" />
     <div class="trait"></div>
     <div class="links">
+      <div class="cross">&#xD7;</div>
       <router-link class="link link_1" to="/"
         ><span class="bold">00</span> HOME</router-link
       >
@@ -18,57 +19,7 @@
     </div>
   </nav>
   <router-view />
-  <div id="burger">
-    <nav class="burger-nav">
-      <img alt="logo" src="/assets/shared/logo.svg" />
-      <NavBurger></NavBurger>
-    </nav>
-
-    <NavSidebar>
-      <ul class="sidebar-panel-nav">
-        <li>
-          <router-link v-on:click="toggle" class="link link_1" to="/"
-            ><span class="bold">00</span> HOME</router-link
-          >
-        </li>
-        <li>
-          <router-link v-on:click="toggle" class="link link_2" to="/destination"
-            ><span class="bold">01</span> DESTINATION</router-link
-          >
-        </li>
-        <li>
-          <router-link v-on:click="toggle" class="link link_3" to="/crew"
-            ><span class="bold">02</span> CREW</router-link
-          >
-        </li>
-        <li>
-          <router-link v-on:click="toggle" class="link link_4" to="/technology"
-            ><span class="bold">03</span> TECHNOLOGY</router-link
-          >
-        </li>
-      </ul>
-    </NavSidebar>
-  </div>
 </template>
-
-<script>
-import NavBurger from "./components/NavBurger.vue";
-import NavSidebar from "./components/NavSidebar.vue";
-import { mutations } from "@/store.js";
-
-export default {
-  name: "app",
-  components: {
-    NavBurger,
-    NavSidebar,
-  },
-  methods: {
-    toggle() {
-      mutations.toggleNav();
-    },
-  },
-};
-</script>
 
 <style>
 * {
@@ -79,7 +30,6 @@ export default {
   position: relative;
   max-width: 1440px;
   padding-bottom: 5rem;
-  margin-top: 0;
 }
 
 nav {
@@ -94,8 +44,7 @@ nav {
   top: 0;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto auto 0;
-  padding-top: 2%;
+  margin: 2% auto auto 0;
 }
 nav .bold {
   font-weight: 700;
@@ -132,7 +81,6 @@ nav a:hover {
   margin: auto;
   width: 52%;
   padding-left: 8%;
-  padding-top: 2%;
   display: flex;
   justify-content: left;
   position: absolute;
@@ -149,7 +97,7 @@ nav a:hover {
   padding-bottom: 5%;
   margin: auto 3%;
 }
-.burger-nav {
+.cross {
   display: none;
 }
 @media screen and (min-width: 601px) and (max-width: 999px) {
@@ -168,60 +116,69 @@ nav a:hover {
 }
 
 @media screen and (max-width: 600px) {
-  .bold {
-    font-family: "Barlow Condensed", sans-serif;
-    display: block;
-    margin: 0;
-    padding-right: 1rem;
-    font-size: 1.7rem;
-    font-weight: 400;
-    letter-spacing: 2px;
+  nav {
+    font-size: 2rem;
+
+    width: 96.18%;
+    height: 10.66vh;
+
+    display: flex;
+    justify-content: left;
+    margin: 2% auto auto 0;
   }
-  .burger-nav {
+  nav .bold {
     display: block;
-    margin-top: 0;
+    margin: 0 1rem;
+  }
+  nav a {
+    width: 60%;
+  }
+  nav a.router-link-exact-active,
+  nav a.router-link-exact-active:hover {
+    border-bottom: none;
+    border-right: solid 0.35rem white;
   }
 
-  .main-nav {
+  .trait {
     display: none;
   }
 
-  .burger-nav img {
-    margin: 1.5rem 0.5rem;
-    width: 2.2rem;
-    height: 2.2rem;
-  }
-  .burger-nav {
+  .links {
+    margin: auto;
+    width: 75%;
+    height: 100vh;
+    padding-left: 0;
+    padding-top: 7rem;
     display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-  }
-  .sidebar-panel {
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: left;
+    position: absolute;
+    right: 0;
+    top: -0.8rem;
+
+    z-index: 99;
+
     background-image: url("./assets/bg-nav-rect.svg");
-    backdrop-filter: blur(10px);
-    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    padding-bottom: 15rem;
+    background-size: 10000%;
+    background-color: rgba(0, 0, 0, 0.1);
   }
-  ul {
-    margin-top: 6rem;
-  }
-  ul.sidebar-panel-nav {
-    list-style-type: none;
-  }
-  ul.sidebar-panel-nav li a {
-    font-family: "Barlow Condensed", sans-serif;
-    color: #fff;
-    font-weight: 200;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    font-size: 1.7rem;
+  .link {
+    width: 91.3%;
     display: flex;
-    padding: 1.5rem 0.5rem;
+    justify-content: left;
+    margin: 1.2rem 2rem;
+    padding: 0.4rem 0;
+  }
+  .cross {
+    color: #d0d6f9;
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-family: "Courier New";
+    font-weight: 200;
+    font-size: 5rem;
   }
 }
 </style>

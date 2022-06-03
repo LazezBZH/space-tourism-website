@@ -151,6 +151,49 @@ h2 {
   }
 }
 
-@media screen and (min-width: 601px) and (max-width: 849px) {
+@media screen and (max-width: 600px) {
+  .destinations {
+    background-image: url("@/assets/destination/background-destination-mobile.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    margin: auto;
+    padding-bottom: 30rem;
+  }
+
+  .destination-details {
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+  .destination-image img {
+    width: 45%;
+    height: 45%;
+  }
+  h1 {
+    width: 75%;
+    font-size: 0.8rem;
+
+    margin: 2rem auto;
+  }
+  h1 span {
+    padding-right: 1rem;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  .destination-txt {
+    width: 90%;
+    margin: auto;
+  }
+  .destination-btn {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem auto 0 auto;
+  }
+  button {
+    padding: 0;
+  }
 }
 </style>

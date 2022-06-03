@@ -84,4 +84,15 @@ h4 {
     line-height: 1.8rem;
   }
 }
+@media screen and (max-width: 600px) {
+  h4 {
+    font-size: 1.7rem;
+
+    margin: auto;
+  }
+  .description {
+    width: 99.9%;
+    font-size: 0.86rem;
+  }
+}
 </style>

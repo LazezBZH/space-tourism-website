@@ -184,4 +184,66 @@ h2 {
     margin: auto;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .crews {
+    background-image: url("@/assets/crew/background-crew-mobile.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  .crew-details {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .crew-image,
+  .crew-txt {
+    position: initial;
+  }
+  h1 {
+    width: 75%;
+    font-size: 0.8rem;
+
+    margin: 2rem auto;
+  }
+  h1 span {
+    padding-right: 1rem;
+  }
+  .crew-txt {
+    width: 90%;
+    margin: auto;
+  }
+  .crew-image {
+    width: auto;
+    max-height: 223px;
+    margin: 1rem auto;
+    display: block;
+    text-align: center;
+  }
+  .crew-image img {
+    width: auto;
+    height: 223px;
+    position: initial;
+  }
+  .crew-btn {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  .crew-txt {
+    width: 93%;
+    position: initial;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  button {
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+}
 </style>

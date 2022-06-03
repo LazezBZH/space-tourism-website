@@ -212,6 +212,63 @@ h2 {
   }
   .technologies {
     background-image: url("@/assets/technology/background-technology-tablet.jpg");
+    background-size: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .technology {
+    background-image: url("@/assets/technology/background-technology-mobile.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    margin: auto;
+  }
+  h1 {
+    font-size: 1rem;
+    margin: 5% auto auto 4rem;
+  }
+  h1 span {
+    padding-right: 1rem;
+  }
+  .technology-details {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .technology-image-landscape {
+    display: block;
+    width: 100%;
+  }
+  .technology-image-landscape img {
+    width: 100%;
+  }
+  .technology-image-portrait {
+    display: none;
+  }
+  .technology-txt {
+    width: 99%;
+    display: block;
+    padding-top: 3rem;
+    margin: auto;
+    text-align: center;
+  }
+  .technology-btn {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    padding: 0;
+  }
+
+  button {
+    width: 1.2rem;
+    height: 1.8rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 0.12rem rgba(255, 255, 255, 0.174);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
   }
 }
 </style>

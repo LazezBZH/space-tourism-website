@@ -115,4 +115,33 @@ h3 {
     font-size: 1.5rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .destination {
+    margin: auto;
+    text-align: center;
+  }
+  .distance,
+  .travel {
+    margin: auto;
+  }
+  h3 {
+    font-size: 4rem;
+  }
+  .description {
+    width: 99.9%;
+    font-size: 0.84rem;
+    margin: 1rem auto;
+  }
+  .under-description {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+  .grey-p {
+    font-size: 0.9rem;
+  }
+  .white-p {
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+  }
+}
 </style>

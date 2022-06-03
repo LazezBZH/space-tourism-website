@@ -77,4 +77,22 @@ h4 {
     padding: auto;
   }
 }
+@media screen and (max-width: 600px) {
+  .crew {
+    margin: auto;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 01rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  .bio {
+    width: 99.9%;
+    font-size: 0.84rem;
+    margin: 1rem auto;
+  }
+}
 </style>
