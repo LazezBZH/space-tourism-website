@@ -32,7 +32,7 @@ export default {
   border-radius: 50%;
 }
 
-@media screen and (min-width: 851px) and (max-width: 1040px) {
+@media screen and (min-width: 850px) and (max-width: 1040px) {
   .home-btn img {
     position: absolute;
     bottom: -3rem;
@@ -44,8 +44,20 @@ export default {
   .home-btn img {
     width: 30%;
     position: absolute;
-    bottom: -30rem;
-    right: 30%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .home-btn img {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    top: -2rem;
+    left: 0;
+    right: 0;
   }
 }
 </style>
