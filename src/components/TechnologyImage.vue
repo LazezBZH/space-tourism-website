@@ -1,5 +1,5 @@
 <template>
-  <img :src="data[i].images.portrait" />
+  <div class="img"><img :src="data[i].images.portrait" /></div>
 </template>
 
 <script>
@@ -21,4 +21,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.img {
+  margin-top: -2rem;
+  padding-bottom: 6rem;
+}
+</style>

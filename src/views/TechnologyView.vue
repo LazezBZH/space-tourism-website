@@ -58,7 +58,7 @@ export default {
 .technologies {
   max-width: 1440px;
   padding-top: 15%;
-  padding-bottom: 55rem;
+
   width: 100%;
 
   background-image: url("@/assets/technology/background-technology-desktop.jpg");
