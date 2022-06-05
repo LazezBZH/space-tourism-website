@@ -62,7 +62,7 @@ export default {
   width: 100%;
 
   background-image: url("@/assets/technology/background-technology-desktop.jpg");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
 }
@@ -212,13 +212,13 @@ h2 {
   }
   .technologies {
     background-image: url("@/assets/technology/background-technology-tablet.jpg");
-    background-size: 100%;
+    background-size: cover;
   }
 }
 @media screen and (max-width: 600px) {
   .technology {
     background-image: url("@/assets/technology/background-technology-mobile.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: top right;
     margin: auto;

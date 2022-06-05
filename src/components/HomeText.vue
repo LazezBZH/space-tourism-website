@@ -45,7 +45,12 @@ p {
   font-size: 1.15rem;
   line-height: 1.9rem;
 }
-
+@media screen and (min-width: 1000px) and (max-width: 1220px) {
+  .home-txt {
+    width: 50%;
+    margin-top: 5%;
+  }
+}
 @media screen and (min-width: 601px) and (max-width: 849px) {
   .home-txt {
     width: 70%;

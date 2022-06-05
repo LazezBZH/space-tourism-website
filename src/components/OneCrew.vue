@@ -59,7 +59,7 @@ h4 {
   line-height: 1.5rem;
 }
 
-@media screen and (min-width: 500px) and (max-width: 850px) {
+@media screen and (min-width: 601px) and (max-width: 850px) {
   .crew {
     margin: auto;
     text-align: center;
@@ -90,8 +90,8 @@ h4 {
     font-size: 1.5rem;
   }
   .bio {
-    width: 99.9%;
-    font-size: 0.84rem;
+    width: 92%;
+    font-size: 0.9rem;
     margin: 1rem auto;
   }
 }

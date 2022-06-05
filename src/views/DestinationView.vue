@@ -58,7 +58,7 @@ export default {
   width: 100%;
   height: 100vh;
   background-image: url("@/assets/destination/background-destination-desktop.jpg");
-  background-size: auto;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top right;
 }
@@ -116,10 +116,23 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
+@media screen and (min-width: 771px) and (max-width: 1220px) {
+  .destinations {
+    background-image: url("@/assets/destination/background-destination-tablet.jpg");
+    margin: auto;
+    background-size: 100%;
+  }
+}
+@media screen and (min-width: 1221px) and (max-width: 1300px) {
+  h1 {
+    margin-bottom: 0;
+  }
+}
 @media screen and (min-width: 500px) and (max-width: 770px) {
   .destinations {
     background-image: url("@/assets/destination/background-destination-tablet.jpg");
     margin: auto;
+    background-size: cover;
   }
   .destination-details {
     flex-direction: column;
@@ -154,7 +167,7 @@ h2 {
 @media screen and (max-width: 600px) {
   .destinations {
     background-image: url("@/assets/destination/background-destination-mobile.jpg");
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
 
     margin: auto;

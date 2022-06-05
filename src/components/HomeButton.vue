@@ -40,12 +40,22 @@ export default {
   }
 }
 
-@media screen and (min-width: 601px) and (max-width: 849px) {
+@media screen and (min-width: 631px) and (max-width: 849px) {
   .home-btn img {
     width: 30%;
     position: absolute;
     bottom: 0;
     top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 630px) {
+  .home-btn img {
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    top: -5rem;
     left: 0;
     right: 0;
   }

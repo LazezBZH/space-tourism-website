@@ -25,14 +25,15 @@ export default {
   width: 100%;
   height: 100vh;
   background-image: url("@/assets/home/background-home-desktop.jpg");
-  background-size: 200%;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: top right;
 }
 
-@media screen and (min-width: 601px) and (max-width: 770px) {
+@media screen and (min-width: 531px) and (max-width: 999px) {
   .home {
     background-image: url("@/assets/home/background-home-tablet.jpg");
+    background-size: 100%;
   }
 }
 @media screen and (min-width: 601px) and (max-width: 849px) {
@@ -40,7 +41,7 @@ export default {
     margin: 0 auto;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 530px) {
   .home {
     margin: 0 auto;
     background-image: url("@/assets/home/background-home-mobile.jpg");

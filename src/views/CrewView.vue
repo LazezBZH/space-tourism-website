@@ -52,13 +52,14 @@ export default {
 <style scoped>
 .crews {
   max-width: 1440px;
-  padding-top: 15%;
+
   width: 100%;
   height: 900px;
   background-image: url("@/assets/crew/background-crew-desktop.jpg");
   background-size: auto;
   background-repeat: no-repeat;
   background-position: top right;
+  margin: 0;
 }
 h1 {
   color: white;
@@ -67,6 +68,8 @@ h1 {
   letter-spacing: 4.72px;
   font-weight: 400;
   margin-left: 10rem;
+  position: absolute;
+  top: 12rem;
 }
 h1 span {
   padding-right: 2rem;
@@ -75,30 +78,30 @@ h1 span {
 }
 .crew-details {
   width: 100%;
-  height: 100%;
+  height: 645px;
   margin: 0;
-  position: relative;
+  position: absolute;
+  top: 15rem;
   display: flex;
   flex-direction: row;
+  justify-content: stretch;
 }
 .crew-txt {
   width: 43%;
   margin-top: 15%;
   margin-left: 10rem;
-  position: absolute;
-  top: 0;
 }
 .crew-image {
-  height: 720px;
-  display: flex;
+  height: auto;
   position: absolute;
-  right: 10%;
-  bottom: 24.5%;
+  right: 0;
+
+  bottom: -1.2rem;
+
+  margin: -5.3% 7rem auto auto;
+  vertical-align: baseline;
 }
-.crew-image img {
-  width: 95%;
-  height: 95%;
-}
+
 button {
   width: 0.7rem;
   height: 0.7rem;
@@ -122,24 +125,22 @@ h2 {
   letter-spacing: 2.7px;
 }
 
-@media screen and (min-width: 851px) and (max-width: 1210px) {
+@media screen and (min-width: 851px) and (max-width: 1222px) {
   .crew-image {
     height: 720px;
     display: flex;
     position: absolute;
-    right: 5%;
-    bottom: 10%;
+    right: 0;
+    bottom: -10rem;
+    margin-right: 1rem;
   }
-  .crew-image img {
-    width: 80%;
-    height: 80%;
-  }
+
   .crew-txt {
     margin-left: 5rem;
   }
 }
 
-@media screen and (min-width: 500px) and (max-width: 850px) {
+@media screen and (min-width: 601px) and (max-width: 850px) {
   .crew-details {
     display: flex;
     flex-direction: column;
@@ -149,9 +150,10 @@ h2 {
     position: initial;
   }
   .crews {
-    height: 1024px;
+    height: 100vh;
     background-image: url("@/assets/crew/background-crew-tablet.jpg");
-    background-size: 100%;
+    background-size: cover;
+    padding-bottom: 50rem;
   }
   h1 {
     font-size: 1.2rem;
@@ -161,7 +163,7 @@ h2 {
   }
   .crew-txt {
     width: 90%;
-    margin: auto;
+    margin: 2rem auto;
   }
   .crew-image {
     width: auto;
@@ -186,12 +188,6 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
-  .crews {
-    background-image: url("@/assets/crew/background-crew-mobile.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top right;
-  }
   .crew-details {
     display: flex;
     flex-direction: column-reverse;
@@ -200,50 +196,41 @@ h2 {
   .crew-txt {
     position: initial;
   }
-  h1 {
-    width: 75%;
-    font-size: 0.8rem;
-
-    margin: 2rem auto;
+  .crews {
+    height: 100vh;
+    background-image: url("@/assets/crew/background-crew-mobile.jpg");
+    background-size: cover;
+    padding-bottom: 0;
+    margin: auto;
   }
-  h1 span {
-    padding-right: 1rem;
+  h1 {
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: -5rem auto auto auto;
   }
   .crew-txt {
     width: 90%;
-    margin: auto;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column-reverse;
   }
   .crew-image {
     width: auto;
-    max-height: 223px;
-    margin: 1rem auto;
+    max-height: 572px;
+    margin: auto;
     display: block;
     text-align: center;
   }
   .crew-image img {
     width: auto;
-    height: 223px;
-    position: initial;
-  }
-  .crew-btn {
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-  }
-  .crew-txt {
-    width: 93%;
-    position: initial;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column-reverse;
+    max-height: 500px;
+    position: absolute;
+    bottom: 18%;
+    left: 25%;
   }
   button {
-    width: 0.7rem;
-    height: 0.7rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 0;
+    margin-top: 0;
   }
 }
 </style>
