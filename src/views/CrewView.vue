@@ -54,7 +54,7 @@ export default {
   max-width: 1440px;
 
   width: 100%;
-  height: 900px;
+  height: 100vh;
   background-image: url("@/assets/crew/background-crew-desktop.jpg");
   background-size: auto;
   background-repeat: no-repeat;
@@ -78,10 +78,11 @@ h1 span {
 }
 .crew-details {
   width: 100%;
-  height: 645px;
+  height: auto;
   margin: 0;
   position: absolute;
   top: 15rem;
+  bottom: -5rem;
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -197,7 +198,7 @@ h2 {
     position: initial;
   }
   .crews {
-    height: 100vh;
+    height: 110vh;
     background-image: url("@/assets/crew/background-crew-mobile.jpg");
     background-size: cover;
     padding-bottom: 0;
@@ -224,10 +225,7 @@ h2 {
   }
   .crew-image img {
     width: auto;
-    max-height: 500px;
-    position: absolute;
-    bottom: 18%;
-    left: 25%;
+    height: 550px;
   }
   button {
     margin-top: 0;

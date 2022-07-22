@@ -56,7 +56,7 @@ export default {
   max-width: 1440px;
   padding-top: 15%;
   width: 100%;
-  height: 100vh;
+
   background-image: url("@/assets/destination/background-destination-desktop.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
@@ -132,7 +132,7 @@ h2 {
   .destinations {
     background-image: url("@/assets/destination/background-destination-tablet.jpg");
     margin: auto;
-    background-size: cover;
+    background-size: auto;
   }
   .destination-details {
     flex-direction: column;

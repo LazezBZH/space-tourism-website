@@ -42,10 +42,10 @@ export default {
 
 @media screen and (min-width: 631px) and (max-width: 849px) {
   .home-btn img {
-    width: 30%;
+    width: 20%;
     position: absolute;
     bottom: 0;
-    top: 0;
+    top: -8rem;
     left: 0;
     right: 0;
   }

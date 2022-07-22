@@ -72,15 +72,19 @@ export default {
 
 <style>
 * {
+  height: auto;
   margin: 0.2rem auto;
   box-sizing: content-box;
+}
+body {
+  min-height: 100vh;
+  margin: 0;
 }
 #app {
   position: relative;
   max-width: 1440px;
-  height: auto;
-  padding-bottom: 5rem;
-  margin-top: 0;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 nav {
