@@ -1,5 +1,5 @@
 <template>
-  <img :src="data[i].images.png" />
+  <img :src="data[i].images.photo" />
 </template>
 
 <script>
